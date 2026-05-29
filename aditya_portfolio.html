@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aditya K. Koundinya — Product & Analytics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ink: #0D0D0B;
+    --paper: #F5F2EC;
+    --accent: #C8440A;
+    --accent2: #1A6B45;
+    --muted: #6B6860;
+    --border: #D8D4CB;
+    --tag-bg: #EAE6DE;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Sora', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1.2rem 4rem;
+    background: var(--paper);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-logo {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a {
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--ink); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex; align-items: flex-end;
+    padding: 0 4rem 6rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-bg-text {
+    position: absolute;
+    top: 50%; left: -2rem;
+    transform: translateY(-50%);
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(8rem, 18vw, 20rem);
+    color: var(--border);
+    opacity: 0.45;
+    white-space: nowrap;
+    user-select: none;
+    pointer-events: none;
+    line-height: 1;
+    letter-spacing: -0.03em;
+  }
+
+  .hero-content { position: relative; z-index: 2; max-width: 800px; }
+
+  .hero-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(3.5rem, 8vw, 7rem);
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    margin-bottom: 1rem;
+  }
+  .hero-name em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+    color: var(--muted);
+    font-weight: 300;
+    max-width: 560px;
+    margin-bottom: 3rem;
+    line-height: 1.7;
+  }
+
+  .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: all 0.2s;
+    cursor: pointer;
+    font-family: 'DM Mono', monospace;
+  }
+  .btn-primary {
+    background: var(--ink);
+    color: var(--paper);
+    border: 1.5px solid var(--ink);
+  }
+  .btn-primary:hover { background: var(--accent); border-color: var(--accent); }
+  .btn-outline {
+    background: transparent;
+    color: var(--ink);
+    border: 1.5px solid var(--border);
+  }
+  .btn-outline:hover { border-color: var(--ink); }
+
+  .hero-scroll {
+    position: absolute;
+    right: 4rem; bottom: 5rem;
+    writing-mode: vertical-rl;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: flex; align-items: center; gap: 0.8rem;
+  }
+  .hero-scroll::after {
+    content: '';
+    display: block;
+    width: 1px; height: 60px;
+    background: var(--muted);
+  }
+
+  /* SECTIONS */
+  section { padding: 7rem 4rem; }
+
+  .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 3rem;
+    display: flex; align-items: center; gap: 1rem;
+  }
+  .section-label::after {
+    content: '';
+    flex: 1; max-width: 80px;
+    height: 1px; background: var(--accent);
+  }
+
+  .section-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+  }
+
+  /* ABOUT */
+  #about {
+    background: var(--ink);
+    color: var(--paper);
+  }
+  #about .section-label { color: #C8440A; }
+  #about .section-label::after { background: #C8440A; }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: start;
+    margin-top: 4rem;
+  }
+  .about-text {
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: #C9C5BC;
+    font-weight: 300;
+  }
+  .about-text p + p { margin-top: 1.2rem; }
+  .about-text strong { color: var(--paper); font-weight: 500; }
+
+  .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .skill-block {
+    border: 1px solid #2A2A27;
+    padding: 1.25rem 1.5rem;
+    border-radius: 3px;
+  }
+  .skill-block-title {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #C8440A;
+    margin-bottom: 0.75rem;
+  }
+  .skill-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .skill-tag {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
+    background: #1C1C19;
+    color: #9B9789;
+    border-radius: 2px;
+    font-family: 'DM Mono', monospace;
+  }
+
+  /* EXPERIENCE */
+  #experience { border-top: 1px solid var(--border); }
+
+  .exp-item {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 3rem;
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .exp-meta {}
+  .exp-company {
+    font-size: 0.75rem;
+    font-family: 'DM Mono', monospace;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.4rem;
+  }
+  .exp-role {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.3rem;
+    line-height: 1.2;
+    margin-bottom: 0.4rem;
+  }
+  .exp-period {
+    font-size: 0.75rem;
+    color: var(--muted);
+    font-family: 'DM Mono', monospace;
+  }
+  .exp-bullets { list-style: none; }
+  .exp-bullets li {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--muted);
+    padding-left: 1.2rem;
+    position: relative;
+    margin-bottom: 0.75rem;
+  }
+  .exp-bullets li::before {
+    content: '—';
+    position: absolute; left: 0;
+    color: var(--accent);
+    font-size: 0.8rem;
+  }
+  .exp-highlight {
+    display: inline-block;
+    background: #F0EADF;
+    color: var(--ink);
+    font-weight: 500;
+    font-size: 0.8rem;
+    padding: 0.15rem 0.5rem;
+    border-radius: 2px;
+    margin-left: 0.3rem;
+  }
+
+  /* PROJECTS */
+  #projects { background: #EFEBE3; }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3.5rem;
+  }
+
+  .project-card {
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 2rem 2rem 1.75rem;
+    transition: transform 0.25s, box-shadow 0.25s;
+  }
+  .project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.09);
+  }
+  .project-type {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    margin-bottom: 0.8rem;
+  }
+  .project-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.45rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    letter-spacing: -0.01em;
+  }
+  .project-desc {
+    font-size: 0.88rem;
+    color: var(--muted);
+    line-height: 1.75;
+    margin-bottom: 1.25rem;
+  }
+  .project-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.25rem; }
+  .project-tag {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.55rem;
+    background: var(--tag-bg);
+    color: var(--muted);
+    border-radius: 2px;
+    font-family: 'DM Mono', monospace;
+  }
+  .project-stat {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+  }
+
+  /* PM PORTFOLIO */
+  #pm { border-top: 1px solid var(--border); }
+
+  .pm-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  .pm-card {
+    border: 1.5px solid var(--border);
+    padding: 2rem;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+  }
+  .pm-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--accent);
+  }
+  .pm-card:nth-child(2)::before { background: var(--accent2); }
+  .pm-number {
+    font-family: 'DM Serif Display', serif;
+    font-size: 4rem;
+    line-height: 1;
+    color: var(--border);
+    position: absolute;
+    top: 1rem; right: 1.5rem;
+    user-select: none;
+  }
+  .pm-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.6rem;
+  }
+  .pm-card:nth-child(2) .pm-label { color: var(--accent2); }
+  .pm-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    max-width: 78%;
+  }
+  .pm-insight {
+    font-size: 0.88rem;
+    color: var(--muted);
+    line-height: 1.75;
+    margin-bottom: 1.25rem;
+  }
+  .pm-metric {
+    display: flex; flex-direction: column;
+    padding: 0.75rem 1rem;
+    background: var(--tag-bg);
+    border-radius: 3px;
+  }
+  .pm-metric-label {
+    font-size: 0.65rem;
+    font-family: 'DM Mono', monospace;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.2rem;
+  }
+  .pm-metric-value {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.1rem;
+    color: var(--ink);
+  }
+
+  /* CONTACT */
+  #contact {
+    background: var(--ink);
+    color: var(--paper);
+    text-align: center;
+    padding: 8rem 4rem;
+  }
+  #contact .section-title { color: var(--paper); }
+  #contact .section-label { color: #C8440A; justify-content: center; }
+  #contact .section-label::after { display: none; }
+  .contact-sub {
+    font-size: 1.05rem;
+    color: #8A8780;
+    margin: 1.5rem auto 3rem;
+    max-width: 500px;
+    font-weight: 300;
+  }
+  .contact-links {
+    display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;
+  }
+  .contact-link {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #8A8780;
+    text-decoration: none;
+    border-bottom: 1px solid #2A2A27;
+    padding-bottom: 2px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .contact-link:hover { color: var(--paper); border-color: var(--paper); }
+
+  footer {
+    background: var(--ink);
+    border-top: 1px solid #1C1C19;
+    padding: 1.5rem 4rem;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .footer-copy {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #3A3A37;
+  }
+
+  /* DIVIDER */
+  .divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 0;
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .hero-eyebrow  { animation: fadeUp 0.7s ease both; animation-delay: 0.1s; }
+  .hero-name     { animation: fadeUp 0.7s ease both; animation-delay: 0.25s; }
+  .hero-subtitle { animation: fadeUp 0.7s ease both; animation-delay: 0.4s; }
+  .hero-ctas     { animation: fadeUp 0.7s ease both; animation-delay: 0.55s; }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { display: none; }
+    .hero { padding: 0 1.5rem 5rem; }
+    section { padding: 5rem 1.5rem; }
+    .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .exp-item { grid-template-columns: 1fr; gap: 0.75rem; }
+    .pm-grid { grid-template-columns: 1fr; }
+    footer { padding: 1.5rem; }
+    #contact { padding: 6rem 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-logo">AKK — Portfolio</span>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#pm">PM Work</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg-text" aria-hidden="true">PM</div>
+  <div class="hero-content">
+    <h1 class="hero-name">Aditya<br><em>Koundinya</em></h1>
+    <p class="hero-subtitle">
+      Product-minded engineer who turns data blind spots into decisions.
+      Built dashboards at Bosch, shipped RAG pipelines, and tears apart
+      funnels looking for the one number that actually matters.
+    </p>
+    <div class="hero-ctas">
+      <a href="#experience" class="btn btn-primary">See my work</a>
+      <a href="mailto:koundinyaaditya2853@gmail.com" class="btn btn-outline">Get in touch</a>
+    </div>
+  </div>
+  <div class="hero-scroll" aria-hidden="true">Scroll</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-label">About</div>
+  <h2 class="section-title" style="color: var(--paper);">The story so far</h2>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>
+        CS graduate from VIT Bhopal (2025), currently in the
+        <strong>NextLeap PM Fellowship (Cohort 47)</strong> — a programme for
+        people who like asking "why" more than "what". I thrive at the
+        intersection of user problem discovery and shipping things that stick.
+      </p>
+      <p>
+        At <strong>Bosch Automotive Electronics</strong>, I owned end-to-end delivery
+        of four live dashboards tracking 40+ KPIs. The work surfaced invisible
+        downtime patterns that nobody knew to look for — ultimately driving an
+        <strong>18% reduction in unplanned downtime</strong> across manufacturing lines.
+      </p>
+      <p>
+        Outside work, I build AI-powered tools and write product teardowns on
+        products I use daily — current obsessions are fintech activation funnels
+        and voice UX in emerging markets.
+      </p>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-block">
+        <div class="skill-block-title">Product</div>
+        <div class="skill-tags">
+          <span class="skill-tag">PRD authoring</span>
+          <span class="skill-tag">JTBD</span>
+          <span class="skill-tag">A/B testing</span>
+          <span class="skill-tag">Funnel analysis</span>
+          <span class="skill-tag">Roadmap prioritization</span>
+          <span class="skill-tag">North star metrics</span>
+        </div>
+      </div>
+      <div class="skill-block">
+        <div class="skill-block-title">Analytics</div>
+        <div class="skill-tags">
+          <span class="skill-tag">SQL</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Hadoop</span>
+          <span class="skill-tag">Power BI</span>
+          <span class="skill-tag">Tableau</span>
+          <span class="skill-tag">OEE modeling</span>
+        </div>
+      </div>
+      <div class="skill-block">
+        <div class="skill-block-title">AI Stack</div>
+        <div class="skill-tags">
+          <span class="skill-tag">RAG</span>
+          <span class="skill-tag">FAISS</span>
+          <span class="skill-tag">OpenAI API</span>
+          <span class="skill-tag">LLM eval</span>
+          <span class="skill-tag">Sentence Transformers</span>
+        </div>
+      </div>
+      <div class="skill-block">
+        <div class="skill-block-title">Tools</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Figma</span>
+          <span class="skill-tag">Notion</span>
+          <span class="skill-tag">Streamlit</span>
+          <span class="skill-tag">Plotly</span>
+          <span class="skill-tag">Git</span>
+          <span class="skill-tag">Jupyter</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-label">Experience</div>
+  <h2 class="section-title">Where I've shipped</h2>
+
+  <div class="exp-item">
+    <div class="exp-meta">
+      <div class="exp-company">Bosch Automotive Electronics</div>
+      <div class="exp-role">Data Analyst — Manufacturing Intelligence</div>
+      <div class="exp-period">Jun 2024 – Dec 2024</div>
+    </div>
+    <ul class="exp-bullets">
+      <li>Owned end-to-end delivery of 4 live dashboards tracking 40+ KPIs (MTTR, MTBF, OEE, line efficiency) across SQL and Hadoop — adopted by plant teams as primary decision tool within 6 weeks.</li>
+      <li>Diagnosed invisible downtime as the root cause of ops blind spots through 3 cross-functional workshops; shipped minor-downtime analytics driving an <span class="exp-highlight">↓18% unplanned downtime</span>.</li>
+      <li>Built a pad-level monitoring system using statistical thresholding on live manufacturing streams; enabled pre-anomaly intervention, reducing scrapped units per shift by an estimated <span class="exp-highlight">10–15%</span>.</li>
+      <li>Designed a stencil-printing defect analysis dashboard surfacing recurring misalignment clusters; cut mean time to root-cause from days to same-session resolution.</li>
+      <li>Led cross-functional requirements gathering with plant ops, quality, and engineering leads; automated reporting and eliminated recurring manual analyst support requests.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-label">AI Projects</div>
+  <h2 class="section-title">Built, not brainstormed</h2>
+  <div class="projects-grid">
+
+    <div class="project-card">
+      <div class="project-type">Fintech · RAG · Compliance</div>
+      <h3 class="project-title">Mirae Asset MF FAQ Chatbot</h3>
+      <p class="project-desc">
+        Compliance risk from hallucinated responses was the core problem. Built a full RAG pipeline
+        (scraper → chunker → FAISS index → GPT-3.5-turbo) grounding all responses across 300+ fund fact sheets.
+        Chose RAG over fine-tuning to preserve regulatory traceability.
+      </p>
+      <div class="project-tags">
+        <span class="project-tag">Python</span>
+        <span class="project-tag">FAISS</span>
+        <span class="project-tag">OpenAI GPT-3.5</span>
+        <span class="project-tag">Sentence Transformers</span>
+        <span class="project-tag">Streamlit</span>
+        <span class="project-tag">Figma</span>
+      </div>
+      <div class="project-stat">✦ Real-time index refresh · Regulatory traceability</div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-type">Product Intelligence · NLP</div>
+      <h3 class="project-title">Wealth Monitor — Review Intelligence</h3>
+      <p class="project-desc">
+        Analysts spending 3+ hours daily on manual review synthesis. Built a GPT-4o pipeline ingesting 500+
+        App Store and Play reviews, auto-generating role-scoped summaries with PII scrubbing — Product, Growth,
+        Support, and Leadership views.
+      </p>
+      <div class="project-tags">
+        <span class="project-tag">Python</span>
+        <span class="project-tag">OpenAI GPT-4o</span>
+        <span class="project-tag">Streamlit</span>
+        <span class="project-tag">Plotly</span>
+      </div>
+      <div class="project-stat">✦ 3h+ → &lt;5 min — 97% reduction in manual effort</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PM PORTFOLIO -->
+<section id="pm">
+  <div class="section-label">PM Portfolio</div>
+  <h2 class="section-title">Problems I've torn apart</h2>
+  <div class="pm-grid">
+
+    <div class="pm-card">
+      <div class="pm-number" aria-hidden="true">01</div>
+      <div class="pm-label">Mobile Product · Retention</div>
+      <h3 class="pm-title">ChatGPT India — Voice UX Adoption</h3>
+      <p class="pm-insight">
+        Diagnosed voice WAU stagnation at 6% despite Hinglish support. Root cause:
+        fear-of-irreversible-sends — 61% of users abandoned voice after one bad send.
+        Proposed contextual mode selector, elevated mic CTA, and a "Review before send" affordance.
+      </p>
+      <div class="pm-metric">
+        <span class="pm-metric-label">North Star</span>
+        <span class="pm-metric-value">Voice active user rate → 25% in 90 days</span>
+      </div>
+    </div>
+
+    <div class="pm-card">
+      <div class="pm-number" aria-hidden="true">02</div>
+      <div class="pm-label">Activation · Funnel Analysis</div>
+      <h3 class="pm-title">n8n — Freemium Onboarding Teardown</h3>
+      <p class="pm-insight">
+        Audited n8n's post-signup funnel ($40M+ ARR). Identified blank-canvas paralysis as the
+        primary activation blocker — estimated 21% first-workflow completion rate from community forum
+        dropout analysis. Proposed a credential-free, pre-populated starter workflow as P0 fix.
+      </p>
+      <div class="pm-metric">
+        <span class="pm-metric-label">Projected lift (benchmarked vs Zapier, Make.com)</span>
+        <span class="pm-metric-value">+25–30 pt activation rate improvement</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-label">Contact</div>
+  <h2 class="section-title">Let's work together</h2>
+  <p class="contact-sub">
+    Open to APM roles and product analytics positions in fintech and consumer tech.
+    Always happy to talk funnels, metrics, or AI-powered product ideas.
+  </p>
+  <div class="contact-links">
+    <a href="mailto:koundinyaaditya2853@gmail.com" class="contact-link">koundinyaaditya2853@gmail.com</a>
+    <a href="https://linkedin.com/in/adityakkoundinya" class="contact-link" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://github.com/Koundinya2003" class="contact-link" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</section>
+
+<footer>
+  <span class="footer-copy">© 2025 Aditya K. Koundinya</span>
+  <span class="footer-copy">NextLeap PM Fellowship — Cohort 47</span>
+</footer>
+
+</body>
+</html>
