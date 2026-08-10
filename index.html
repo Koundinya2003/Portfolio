@@ -1,0 +1,1606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Aditya K. Koundinya — AI Product & Product Analytics</title>
+<meta name="description" content="Computer Science graduate and NextLeap Product Management Fellow building AI products end to end — retrieval, guardrails, evaluation — and turning manufacturing data into decisions at Bosch. Open to APM, Product Analyst and AI Product roles.">
+<meta name="author" content="Aditya K. Koundinya">
+<link rel="canonical" href="https://reliable-pithivier-8680e0.netlify.app/">
+<meta name="theme-color" content="#F6F3ED">
+
+<!-- Open Graph / social -->
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Aditya K. Koundinya">
+<meta property="og:title" content="Aditya K. Koundinya — AI Product & Product Analytics">
+<meta property="og:description" content="CS graduate and NextLeap PM Fellow. I build AI products end to end — retrieval, guardrails, evaluation — and define the metric that decides whether they launch.">
+<meta property="og:url" content="https://reliable-pithivier-8680e0.netlify.app/">
+<meta property="og:image" content="https://reliable-pithivier-8680e0.netlify.app/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Aditya K. Koundinya — AI Product and Product Analytics portfolio">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Aditya K. Koundinya — AI Product & Product Analytics">
+<meta name="twitter:description" content="CS graduate and NextLeap PM Fellow building AI products end to end — retrieval, guardrails, evaluation.">
+<meta name="twitter:image" content="https://reliable-pithivier-8680e0.netlify.app/assets/og-image.png">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2312120F'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' fill='%23F6F3ED' text-anchor='middle'%3EA%3C/text%3E%3Ccircle cx='47' cy='19' r='5' fill='%23C8440A'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2312120F'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' fill='%23F6F3ED' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Serif+Display&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Aditya K. Koundinya",
+  "jobTitle": "AI Product & Product Analytics",
+  "email": "mailto:koundinyaaditya2853@gmail.com",
+  "address": { "@type": "PostalAddress", "addressLocality": "Bengaluru", "addressCountry": "IN" },
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "Vellore Institute of Technology, Bhopal" },
+  "url": "https://reliable-pithivier-8680e0.netlify.app/",
+  "sameAs": [
+    "https://github.com/Koundinya2003",
+    "https://www.linkedin.com/in/adityakkoundinya/"
+  ],
+  "knowsAbout": ["Product Management", "Product Analytics", "AI Products", "Retrieval-Augmented Generation", "SQL", "Python", "Tableau"]
+}
+</script>
+
+<style>
+  :root {
+    --ink:      #12120F;
+    --ink-soft: #2A2A25;
+    --paper:    #F6F3ED;
+    --surface:  #FBF9F5;
+    --sunk:     #EFEBE2;
+    --accent:   #C8440A;
+    --accent2:  #1A6B45;
+    --muted:    #6B6860;
+    --muted-2:  #8A8780;
+    --border:   #DCD8CF;
+    --border-2: #C9C4B8;
+    --tag-bg:   #EAE6DE;
+
+    --dark-border: #26261F;
+    --dark-tag:    #1C1C17;
+    --dark-text:   #C9C5BC;
+
+    --maxw: 1180px;
+    --r: 4px;
+
+    --f-display: 'DM Serif Display', Georgia, 'Times New Roman', serif;
+    --f-sans: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --f-mono: 'DM Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; scroll-padding-top: 84px; -webkit-text-size-adjust: 100%; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--f-sans);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.65;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img, svg { max-width: 100%; height: auto; display: block; }
+
+  a { color: inherit; }
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  .skip-link {
+    position: absolute; top: 0; left: 0; z-index: 999;
+    background: var(--ink); color: var(--paper);
+    padding: 0.75rem 1.25rem; font-size: 0.8rem;
+    font-family: var(--f-mono);
+    transform: translateY(-110%);
+    transition: transform 0.15s;
+  }
+  .skip-link:focus { transform: translateY(0); }
+
+  .wrap { max-width: var(--maxw); margin: 0 auto; width: 100%; }
+
+  /* ---------- NAV ---------- */
+  .site-nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(246,243,237,0.92);
+    backdrop-filter: saturate(140%) blur(8px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-inner {
+    max-width: var(--maxw); margin: 0 auto;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 0.9rem 2rem;
+    gap: 1rem;
+  }
+  .nav-logo {
+    font-family: var(--f-mono);
+    font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--ink); text-decoration: none; white-space: nowrap;
+    min-width: 0; overflow: hidden; text-overflow: ellipsis;
+  }
+  .nav-logo .sep { color: var(--accent); }
+
+  .nav-right { display: flex; align-items: center; gap: 1.75rem; flex: none; }
+  .nav-links { display: flex; gap: 1.6rem; list-style: none; }
+  .nav-links a {
+    font-size: 0.78rem; letter-spacing: 0.05em;
+    color: var(--muted); text-decoration: none;
+    padding: 0.2rem 0; border-bottom: 1px solid transparent;
+    transition: color 0.18s, border-color 0.18s;
+  }
+  .nav-links a:hover, .nav-links a.is-active { color: var(--ink); border-color: var(--accent); }
+
+  .nav-cta {
+    font-family: var(--f-mono);
+    font-size: 0.7rem; letter-spacing: 0.09em; text-transform: uppercase;
+    text-decoration: none; padding: 0.5rem 1rem;
+    border: 1.5px solid var(--ink); border-radius: var(--r);
+    background: var(--ink); color: var(--paper);
+    transition: background 0.18s, border-color 0.18s;
+    white-space: nowrap;
+  }
+  .nav-cta:hover { background: var(--accent); border-color: var(--accent); }
+
+  .nav-toggle {
+    display: none;
+    background: none; border: 1px solid var(--border-2);
+    border-radius: var(--r); cursor: pointer;
+    padding: 0.5rem 0.7rem;
+    font-family: var(--f-mono); font-size: 0.7rem;
+    letter-spacing: 0.09em; text-transform: uppercase; color: var(--ink);
+  }
+
+  /* ---------- SECTION SHELL ---------- */
+  section { padding: 6rem 2rem; }
+  .band-dark { background: var(--ink); color: var(--paper); }
+  .band-sunk { background: var(--sunk); }
+  .band-line { border-top: 1px solid var(--border); }
+
+  .section-label {
+    font-family: var(--f-mono);
+    font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 1.1rem;
+    display: flex; align-items: center; gap: 0.9rem;
+  }
+  .section-label::after {
+    content: ''; flex: 0 1 64px; height: 1px; background: currentColor; opacity: 0.5;
+  }
+  .section-title {
+    font-family: var(--f-display);
+    font-size: clamp(1.9rem, 4.2vw, 3rem);
+    line-height: 1.1; letter-spacing: -0.02em;
+  }
+  .section-intro {
+    margin-top: 1.1rem; max-width: 62ch;
+    color: var(--muted); font-weight: 300; font-size: 1.02rem;
+  }
+  .band-dark .section-intro { color: var(--dark-text); }
+  .band-dark .section-title { color: var(--paper); }
+
+  /* ---------- HERO ---------- */
+  .hero { padding: clamp(3.5rem, 8vw, 6.5rem) 2rem clamp(3.5rem, 7vw, 5.5rem); }
+  .hero-grid {
+    display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+    gap: clamp(2rem, 5vw, 4.5rem); align-items: center;
+  }
+  .hero-eyebrow {
+    font-family: var(--f-mono);
+    font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 1.4rem;
+    line-height: 1.6;
+  }
+  .status-dot {
+    display: inline-block; vertical-align: middle;
+    width: 7px; height: 7px; border-radius: 50%;
+    background: var(--accent2); margin-right: 0.55rem;
+    position: relative; top: -1px;
+  }
+  .hero-name {
+    font-family: var(--f-display);
+    font-size: clamp(2.7rem, 7vw, 5rem);
+    line-height: 1; letter-spacing: -0.035em; margin-bottom: 1.4rem;
+  }
+  .hero-name em { font-style: italic; color: var(--accent); }
+  .hero-pitch {
+    font-size: clamp(1.02rem, 1.6vw, 1.18rem);
+    color: var(--ink-soft); font-weight: 300;
+    max-width: 56ch; line-height: 1.72; margin-bottom: 1.6rem;
+  }
+  .hero-pitch strong { font-weight: 500; color: var(--ink); }
+
+  .hero-roles {
+    display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 2.2rem;
+    list-style: none;
+  }
+  .role-chip {
+    font-family: var(--f-mono); font-size: 0.7rem;
+    padding: 0.28rem 0.65rem;
+    border: 1px solid var(--border-2); border-radius: 100px;
+    color: var(--muted); background: var(--surface);
+  }
+
+  .btn-row { display: flex; gap: 0.7rem; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    padding: 0.72rem 1.4rem;
+    font-family: var(--f-mono); font-size: 0.74rem;
+    letter-spacing: 0.09em; text-transform: uppercase;
+    text-decoration: none; border-radius: var(--r);
+    transition: background 0.18s, border-color 0.18s, color 0.18s, transform 0.18s;
+    border: 1.5px solid transparent; cursor: pointer;
+  }
+  .btn-primary { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+  .btn-primary:hover { background: var(--accent); border-color: var(--accent); }
+  .btn-outline { color: var(--ink); border-color: var(--border-2); background: transparent; }
+  .btn-outline:hover { border-color: var(--ink); background: var(--surface); }
+  .hero-links {
+    display: flex; flex-wrap: wrap; gap: 0.4rem 1.4rem; margin-top: 1.4rem;
+  }
+  .hero-links a {
+    font-family: var(--f-mono); font-size: 0.74rem;
+    color: var(--muted); text-decoration: none;
+    border-bottom: 1px solid var(--border-2); padding-bottom: 2px;
+    transition: color 0.18s, border-color 0.18s;
+  }
+  .hero-links a:hover { color: var(--ink); border-color: var(--accent); }
+
+  /* hero facts card */
+  .facts-card {
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--surface);
+    padding: 1.6rem 1.75rem;
+    box-shadow: 0 1px 0 rgba(18,18,15,0.03);
+  }
+  .facts-title {
+    font-family: var(--f-mono); font-size: 0.66rem;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--muted-2); margin-bottom: 1.2rem;
+    padding-bottom: 0.8rem; border-bottom: 1px solid var(--border);
+  }
+  .fact { padding: 0.75rem 0; border-bottom: 1px dashed var(--border); }
+  .fact:last-child { border-bottom: none; padding-bottom: 0; }
+  .fact-k {
+    font-family: var(--f-mono); font-size: 0.63rem;
+    letter-spacing: 0.13em; text-transform: uppercase;
+    color: var(--muted-2); margin-bottom: 0.2rem;
+  }
+  .fact-v { font-size: 0.92rem; line-height: 1.5; color: var(--ink); }
+  .fact-v small { display: block; color: var(--muted); font-size: 0.8rem; }
+
+  /* ---------- ABOUT ---------- */
+  .about-grid {
+    display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+    gap: clamp(2rem, 5vw, 4.5rem); align-items: start; margin-top: 3rem;
+  }
+  .prose p { font-size: 1.02rem; line-height: 1.85; color: var(--dark-text); font-weight: 300; }
+  .prose p + p { margin-top: 1.1rem; }
+  .prose strong { color: var(--paper); font-weight: 500; }
+
+  .arc { display: grid; gap: 0; margin-top: 0.5rem; }
+  .arc-step {
+    display: grid; grid-template-columns: 44px 1fr; gap: 1rem;
+    padding: 1rem 0; border-bottom: 1px solid var(--dark-border);
+  }
+  .arc-step:last-child { border-bottom: none; }
+  .arc-n {
+    font-family: var(--f-mono); font-size: 0.68rem;
+    color: var(--accent); padding-top: 0.15rem; letter-spacing: 0.08em;
+  }
+  .arc-h { font-size: 0.95rem; font-weight: 500; color: var(--paper); margin-bottom: 0.15rem; }
+  .arc-p { font-size: 0.87rem; color: #9A968C; line-height: 1.6; font-weight: 300; }
+
+  /* ---------- PROCESS ---------- */
+  .flow {
+    display: grid; grid-template-columns: repeat(6, minmax(0,1fr));
+    gap: 0.5rem; margin-top: 3rem; list-style: none;
+  }
+  .flow-step {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--r); padding: 1.1rem 1rem 1.2rem;
+    position: relative;
+  }
+  .flow-step::after {
+    content: '→';
+    position: absolute; right: -0.62rem; top: 50%;
+    transform: translateY(-50%);
+    color: var(--muted-2); font-size: 0.85rem; z-index: 2;
+    background: var(--paper); line-height: 1; padding: 0 1px;
+  }
+  .flow-step:last-child::after { content: none; }
+  .flow-n {
+    font-family: var(--f-mono); font-size: 0.62rem;
+    color: var(--accent); letter-spacing: 0.12em; margin-bottom: 0.5rem;
+  }
+  .flow-h {
+    font-family: var(--f-display); font-size: 1.08rem;
+    line-height: 1.15; margin-bottom: 0.45rem;
+  }
+  .flow-p { font-size: 0.8rem; color: var(--muted); line-height: 1.55; }
+
+  /* ---------- PROJECTS ---------- */
+  .case {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 6px; margin-top: 3rem; overflow: hidden;
+  }
+  .case-head {
+    padding: 2rem clamp(1.4rem, 3vw, 2.5rem) 1.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .kicker {
+    font-family: var(--f-mono); font-size: 0.65rem;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--accent2); margin-bottom: 0.8rem;
+    display: flex; align-items: center; gap: 0.55rem; flex-wrap: wrap;
+  }
+  .badge-featured {
+    background: var(--accent); color: #fff;
+    padding: 0.15rem 0.5rem; border-radius: 2px; letter-spacing: 0.1em;
+  }
+  .case-title {
+    font-family: var(--f-display);
+    font-size: clamp(1.6rem, 3.4vw, 2.25rem);
+    line-height: 1.12; letter-spacing: -0.015em; margin-bottom: 0.6rem;
+  }
+  .case-sub { color: var(--muted); font-weight: 300; max-width: 68ch; font-size: 0.98rem; }
+
+  .case-body {
+    display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+    gap: 0;
+  }
+  .case-col { padding: 1.9rem clamp(1.4rem, 3vw, 2.5rem); min-width: 0; }
+  .case-col + .case-col { border-left: 1px solid var(--border); }
+
+  .block + .block { margin-top: 1.6rem; }
+  .block-h {
+    font-family: var(--f-mono); font-size: 0.64rem;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--muted-2); margin-bottom: 0.5rem;
+  }
+  .block-p { font-size: 0.91rem; line-height: 1.72; color: var(--ink-soft); }
+  .block-list { list-style: none; }
+  .block-list li {
+    font-size: 0.89rem; line-height: 1.68; color: var(--ink-soft);
+    padding-left: 1.1rem; position: relative;
+  }
+  .block-list li + li { margin-top: 0.7rem; }
+  .block-list li::before {
+    content: ''; position: absolute; left: 0; top: 0.62em;
+    width: 5px; height: 5px; border-radius: 50%; background: var(--accent);
+  }
+  .block-list b { font-weight: 500; color: var(--ink); }
+
+  /* pipeline diagram */
+  .pipe { margin-top: 0.4rem; }
+  .pipe-row {
+    display: grid; grid-template-columns: 26px 1fr; gap: 0.85rem;
+    position: relative; padding-bottom: 1rem;
+  }
+  .pipe-row:last-child { padding-bottom: 0; }
+  .pipe-row::before {
+    content: ''; position: absolute; left: 12.5px; top: 24px; bottom: 0;
+    width: 1px; background: var(--border-2);
+  }
+  .pipe-row:last-child::before { display: none; }
+  .pipe-n {
+    width: 26px; height: 26px; border-radius: 50%;
+    border: 1px solid var(--border-2); background: var(--paper);
+    display: grid; place-items: center;
+    font-family: var(--f-mono); font-size: 0.68rem; color: var(--accent);
+    position: relative; z-index: 1;
+  }
+  .pipe-h { font-size: 0.88rem; font-weight: 500; margin-bottom: 0.15rem; }
+  .pipe-p { font-size: 0.83rem; color: var(--muted); line-height: 1.6; }
+  .pipe-p code {
+    font-family: var(--f-mono); font-size: 0.78rem;
+    background: var(--tag-bg); padding: 0.05rem 0.3rem; border-radius: 2px;
+  }
+
+  /* eval table */
+  .table-scroll { overflow-x: auto; margin-top: 0.6rem; }
+  table.eval {
+    width: 100%; border-collapse: collapse; min-width: 300px;
+    font-size: 0.85rem;
+  }
+  table.eval th, table.eval td {
+    text-align: left; padding: 0.55rem 0.7rem;
+    border-bottom: 1px solid var(--border);
+  }
+  table.eval th {
+    font-family: var(--f-mono); font-size: 0.63rem;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--muted-2); font-weight: 400;
+  }
+  table.eval td:first-child { color: var(--ink-soft); }
+  table.eval td.num {
+    font-family: var(--f-mono); color: var(--ink); white-space: nowrap;
+  }
+  table.eval td.num b { color: var(--accent); font-weight: 500; }
+  .table-note { font-size: 0.76rem; color: var(--muted-2); margin-top: 0.6rem; line-height: 1.55; }
+
+  .case-foot {
+    padding: 1.25rem clamp(1.4rem, 3vw, 2.5rem);
+    border-top: 1px solid var(--border);
+    background: var(--paper);
+    display: flex; justify-content: space-between; align-items: center;
+    gap: 1rem; flex-wrap: wrap;
+  }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+  .tag {
+    font-family: var(--f-mono); font-size: 0.68rem;
+    padding: 0.2rem 0.55rem; background: var(--tag-bg);
+    color: var(--muted); border-radius: 2px;
+  }
+  .link-row { display: flex; gap: 1.1rem; flex-wrap: wrap; }
+  .txt-link {
+    font-family: var(--f-mono); font-size: 0.71rem;
+    letter-spacing: 0.07em; text-transform: uppercase;
+    color: var(--ink); text-decoration: none;
+    border-bottom: 1px solid var(--accent); padding-bottom: 2px;
+    white-space: nowrap; transition: color 0.18s;
+  }
+  .txt-link:hover { color: var(--accent); }
+  .txt-link[aria-disabled] { color: var(--muted-2); border-color: var(--border-2); }
+
+  /* project card grid */
+  .card-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(min(310px, 100%), 1fr));
+    gap: 1.25rem; margin-top: 1.25rem;
+  }
+  .p-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 6px; padding: 1.7rem 1.6rem 1.4rem;
+    display: flex; flex-direction: column;
+    transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s;
+  }
+  .p-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 36px rgba(18,18,15,0.08);
+    border-color: var(--border-2);
+  }
+  .p-title {
+    font-family: var(--f-display); font-size: 1.35rem;
+    line-height: 1.18; margin-bottom: 0.9rem; letter-spacing: -0.01em;
+  }
+  .p-block + .p-block { margin-top: 0.95rem; }
+  .p-h {
+    font-family: var(--f-mono); font-size: 0.61rem;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--muted-2); margin-bottom: 0.25rem;
+  }
+  .p-p { font-size: 0.865rem; line-height: 1.68; color: var(--ink-soft); }
+  .p-spacer { flex: 1; min-height: 1.2rem; }
+  .p-foot {
+    border-top: 1px solid var(--border); padding-top: 1rem; margin-top: 1.2rem;
+  }
+  .p-foot .tag-row { margin-bottom: 0.9rem; }
+
+  /* ---------- AI CAPABILITY GRID ---------- */
+  .cap-grid {
+    display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1px; margin-top: 3rem;
+    background: var(--dark-border); border: 1px solid var(--dark-border);
+    border-radius: 6px; overflow: hidden;
+  }
+  .cap {
+    background: var(--ink); padding: 1.6rem 1.5rem;
+  }
+  .cap-h {
+    font-family: var(--f-display); font-size: 1.15rem;
+    color: var(--paper); margin-bottom: 0.6rem; line-height: 1.2;
+  }
+  .cap-p { font-size: 0.86rem; color: #9A968C; line-height: 1.65; font-weight: 300; }
+  .cap-src {
+    font-family: var(--f-mono); font-size: 0.62rem;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--accent); margin-top: 0.85rem;
+  }
+
+  /* ---------- EXPERIENCE ---------- */
+  .exp {
+    margin-top: 3rem;
+    display: grid; grid-template-columns: 260px minmax(0,1fr);
+    gap: clamp(1.5rem, 4vw, 3.5rem);
+  }
+  .exp-company {
+    font-family: var(--f-display); font-size: 1.5rem;
+    line-height: 1.15; margin-bottom: 0.5rem;
+  }
+  .exp-role {
+    font-size: 0.92rem; color: var(--ink-soft); margin-bottom: 0.5rem; font-weight: 500;
+  }
+  .exp-meta {
+    font-family: var(--f-mono); font-size: 0.72rem;
+    color: var(--muted); line-height: 1.7;
+  }
+  .exp-stack {
+    margin-top: 1.1rem; display: flex; flex-wrap: wrap; gap: 0.35rem;
+  }
+
+  .pct-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr));
+    gap: 1px; background: var(--border);
+    border: 1px solid var(--border); border-radius: var(--r);
+    overflow: hidden; margin-bottom: 1.8rem;
+  }
+  .pct { background: var(--surface); padding: 1.1rem 1.1rem 1.2rem; }
+  .pct-v {
+    font-family: var(--f-display); font-size: 1.75rem;
+    line-height: 1; color: var(--accent); margin-bottom: 0.35rem;
+  }
+  .pct-l { font-size: 0.78rem; color: var(--muted); line-height: 1.5; }
+
+  .story { display: grid; gap: 1.4rem; }
+  .story-row {
+    display: grid; grid-template-columns: 96px minmax(0,1fr);
+    gap: 1.2rem; align-items: start;
+  }
+  .story-k {
+    font-family: var(--f-mono); font-size: 0.63rem;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--accent); padding-top: 0.28rem;
+  }
+  .story-v { font-size: 0.93rem; line-height: 1.75; color: var(--ink-soft); }
+  .story-v b { font-weight: 500; color: var(--ink); }
+  .story-v ul { list-style: none; }
+  .story-v li { padding-left: 1.05rem; position: relative; }
+  .story-v li + li { margin-top: 0.6rem; }
+  .story-v li::before {
+    content: ''; position: absolute; left: 0; top: 0.66em;
+    width: 5px; height: 5px; border-radius: 50%; background: var(--border-2);
+  }
+
+  /* ---------- SKILLS ---------- */
+  .skill-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+    gap: 1.25rem; margin-top: 3rem;
+  }
+  .skill-card {
+    border: 1px solid var(--border); border-radius: 6px;
+    padding: 1.5rem 1.4rem; background: var(--surface);
+  }
+  .skill-h {
+    font-family: var(--f-display); font-size: 1.2rem; margin-bottom: 0.3rem;
+  }
+  .skill-note {
+    font-size: 0.78rem; color: var(--muted-2); margin-bottom: 1rem; line-height: 1.5;
+  }
+  .skill-list { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+
+  /* ---------- EDUCATION ---------- */
+  .edu-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+    gap: 1.25rem; margin-top: 3rem;
+  }
+  .edu {
+    border: 1px solid var(--border); border-left: 3px solid var(--accent);
+    border-radius: var(--r); padding: 1.4rem 1.4rem; background: var(--surface);
+  }
+  .edu:nth-child(2) { border-left-color: var(--accent2); }
+  .edu:nth-child(3) { border-left-color: var(--border-2); }
+  .edu-h { font-family: var(--f-display); font-size: 1.18rem; line-height: 1.2; margin-bottom: 0.35rem; }
+  .edu-m {
+    font-family: var(--f-mono); font-size: 0.71rem;
+    color: var(--muted); margin-bottom: 0.7rem;
+  }
+  .edu-p { font-size: 0.86rem; color: var(--ink-soft); line-height: 1.65; }
+  .edu-p ul { list-style: none; margin-top: 0.3rem; }
+  .edu-p li { padding-left: 0.9rem; position: relative; }
+  .edu-p li + li { margin-top: 0.35rem; }
+  .edu-p li::before {
+    content: ''; position: absolute; left: 0; top: 0.62em;
+    width: 4px; height: 4px; border-radius: 50%; background: var(--border-2);
+  }
+
+  /* ---------- CONTACT ---------- */
+  #contact { text-align: center; padding: 6.5rem 2rem; }
+  #contact .section-label { justify-content: center; }
+  #contact .section-label::after { display: none; }
+  #contact .section-intro { margin-left: auto; margin-right: auto; }
+  .contact-actions {
+    display: flex; justify-content: center; gap: 0.7rem;
+    flex-wrap: wrap; margin-top: 2.4rem;
+  }
+  .band-dark .btn-primary { background: var(--paper); color: var(--ink); border-color: var(--paper); }
+  .band-dark .btn-primary:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .band-dark .btn-outline { color: var(--paper); border-color: var(--dark-border); }
+  .band-dark .btn-outline:hover { border-color: var(--paper); background: transparent; }
+
+  footer {
+    background: var(--ink); border-top: 1px solid var(--dark-border);
+    padding: 1.6rem 2rem;
+  }
+  .foot-inner {
+    max-width: var(--maxw); margin: 0 auto;
+    display: flex; justify-content: space-between; align-items: center;
+    gap: 1rem; flex-wrap: wrap;
+  }
+  .foot-t {
+    font-family: var(--f-mono); font-size: 0.66rem;
+    letter-spacing: 0.09em; text-transform: uppercase; color: #55534B;
+  }
+
+  /* ---------- REVEAL ---------- */
+  .reveal { opacity: 0; transform: translateY(18px); }
+  .reveal.in { opacity: 1; transform: none; transition: opacity 0.6s ease, transform 0.6s ease; }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 1080px) {
+    .flow { grid-template-columns: repeat(3, minmax(0,1fr)); gap: 0.75rem; }
+    .flow-step::after { content: none; }
+    .cap-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+    .nav-toggle { display: inline-block; }
+    .nav-inner { padding: 0.8rem 1.25rem; }
+    .nav-right { gap: 0.6rem; }
+
+    .site-nav.open .nav-links {
+      display: flex; flex-direction: column; gap: 0;
+      position: absolute; left: 0; right: 0; top: 100%;
+      background: var(--paper); border-bottom: 1px solid var(--border);
+      padding: 0.5rem 1.25rem 1.25rem;
+    }
+    .site-nav.open .nav-links a {
+      display: block; padding: 0.85rem 0;
+      border-bottom: 1px solid var(--border); font-size: 0.95rem;
+    }
+    .site-nav.open .nav-links li:last-child a { border-bottom: none; }
+    .site-nav { position: sticky; }
+    .nav-inner { position: relative; }
+
+    section { padding: 4.5rem 1.25rem; }
+    .hero { padding: 3rem 1.25rem 3.5rem; }
+    .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .case-body { grid-template-columns: 1fr; }
+    .case-col + .case-col { border-left: none; border-top: 1px solid var(--border); }
+    .exp { grid-template-columns: 1fr; gap: 2rem; }
+    #contact { padding: 5rem 1.25rem; }
+    footer { padding: 1.5rem 1.25rem; }
+  }
+
+  @media (max-width: 640px) {
+    .cap-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 560px) {
+    .flow { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    .story-row { grid-template-columns: 1fr; gap: 0.35rem; }
+    .story-k { padding-top: 0; }
+    .btn { padding: 0.68rem 1.1rem; font-size: 0.7rem; }
+    .case-foot { flex-direction: column; align-items: flex-start; }
+    .nav-cta { padding: 0.45rem 0.75rem; font-size: 0.65rem; }
+    .nav-logo-suffix { display: none; }
+    .nav-logo { font-size: 0.72rem; }
+    .nav-right { gap: 0.45rem; }
+    table.eval th, table.eval td { padding: 0.5rem 0.45rem; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important;
+      transition-duration: 0.001ms !important;
+    }
+    .reveal { opacity: 1; transform: none; }
+  }
+
+  /* Without JS the IntersectionObserver never fires — never hide content. */
+  .no-js .reveal { opacity: 1; transform: none; }
+
+  @media print {
+    .site-nav, .hero-roles, .btn-row, .contact-actions { display: none; }
+    body { background: #fff; }
+  }
+</style>
+</head>
+<body class="no-js">
+<script>document.body.classList.remove('no-js');</script>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<nav class="site-nav" id="siteNav" aria-label="Primary">
+  <div class="nav-inner">
+    <a class="nav-logo" href="#top">Aditya K. Koundinya<span class="nav-logo-suffix"> <span class="sep">/</span> Product</span></a>
+    <div class="nav-right">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#work">Work</a></li>
+        <li><a href="#ai">AI Depth</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#casestudies">Case Studies</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks">Menu</button>
+      <a class="nav-cta" href="assets/Aditya-K-Koundinya-Resume.pdf" download>Résumé</a>
+    </div>
+  </div>
+</nav>
+
+<main id="main">
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="hero-eyebrow"><span class="status-dot" aria-hidden="true"></span> Open to APM &amp; Product Analyst roles · Bengaluru, India</p>
+      <h1 class="hero-name">Aditya K.<br><em>Koundinya</em></h1>
+      <p class="hero-pitch">
+        Computer Science graduate and <strong>NextLeap Product Management Fellow</strong>.
+        I build AI products end to end — grounding them in real sources, putting guardrails
+        in front of the model, and defining the metric that decides whether they ship.
+        Before that, I turned manufacturing data into decisions at <strong>Bosch</strong>.
+      </p>
+      <ul class="hero-roles" aria-label="Roles I am targeting">
+        <li class="role-chip">Associate Product Manager</li>
+        <li class="role-chip">Product Analyst</li>
+        <li class="role-chip">AI Product</li>
+        <li class="role-chip">Product Operations</li>
+        <li class="role-chip">Business Analyst</li>
+        <li class="role-chip">Growth Analytics</li>
+      </ul>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="#work">View my work</a>
+        <a class="btn btn-outline" href="assets/Aditya-K-Koundinya-Resume.pdf" download>Download résumé</a>
+        <a class="btn btn-outline" href="#contact">Contact</a>
+      </div>
+      <p class="hero-links">
+        <a href="https://github.com/Koundinya2003" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        <a href="https://www.linkedin.com/in/adityakkoundinya/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+        <a href="mailto:koundinyaaditya2853@gmail.com">koundinyaaditya2853@gmail.com</a>
+      </p>
+    </div>
+
+    <aside class="facts-card" aria-label="Profile at a glance">
+      <p class="facts-title">At a glance</p>
+      <div class="fact">
+        <p class="fact-k">Currently</p>
+        <p class="fact-v">NextLeap Product Management Fellowship<small>Cohort 47 · Mar–Jun 2026</small></p>
+      </div>
+      <div class="fact">
+        <p class="fact-k">Most recent role</p>
+        <p class="fact-v">Data Analyst Intern, Bosch Automotive Electronics<small>Manufacturing digitalisation · Jun–Dec 2024</small></p>
+      </div>
+      <div class="fact">
+        <p class="fact-k">Education</p>
+        <p class="fact-v">B.Tech, Computer Science &amp; Engineering<small>VIT Bhopal · 2021–2025 · GPA 7.7/10</small></p>
+      </div>
+      <div class="fact">
+        <p class="fact-k">Shipped</p>
+        <p class="fact-v">Four AI products, built end to end<small>Retrieval · guardrails · evaluation · analytics</small></p>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section id="about" class="band-dark">
+  <div class="wrap">
+    <p class="section-label">About</p>
+    <h2 class="section-title">Computer Science taught me to build.<br>Analytics taught me what to build.</h2>
+
+    <div class="about-grid">
+      <div class="prose reveal">
+        <p>
+          I started in engineering, and the part that held my attention was never the code —
+          it was the question underneath it. At Bosch, I sat with line engineers who were each
+          maintaining their own manual KPI report and discovered the real problem wasn't
+          missing data. It was that nobody could get to it in time to act on it.
+        </p>
+        <p>
+          That reframing is what moved me toward product. Since then I've built four AI
+          products end to end, and the pattern has been consistent: the hard part is rarely
+          the model. It's <strong>deciding what the product is allowed to say</strong>,
+          what happens when the model fails, and which single number tells you whether
+          any of it worked.
+        </p>
+        <p>
+          I'm now a <strong>NextLeap Product Management Fellow (Cohort 47)</strong>, writing
+          teardowns and growth PRDs alongside the building. I'm looking for a product role
+          where technical depth is an advantage rather than a footnote — somewhere I can
+          own a problem from discovery through to the metric.
+        </p>
+      </div>
+
+      <div class="arc reveal" aria-label="Career arc">
+        <div class="arc-step">
+          <span class="arc-n">01</span>
+          <div>
+            <p class="arc-h">Computer Science</p>
+            <p class="arc-p">B.Tech CSE at VIT Bhopal. Enough engineering to build the thing myself, and to know what's expensive to build.</p>
+          </div>
+        </div>
+        <div class="arc-step">
+          <span class="arc-n">02</span>
+          <div>
+            <p class="arc-h">Data analytics</p>
+            <p class="arc-p">Bosch manufacturing digitalisation. SQL, HiveQL and Python ETL behind dashboards that plant teams actually used.</p>
+          </div>
+        </div>
+        <div class="arc-step">
+          <span class="arc-n">03</span>
+          <div>
+            <p class="arc-h">Product thinking</p>
+            <p class="arc-p">NextLeap PM Fellowship. Discovery, PRDs, prioritisation, teardowns — and the habit of defending a decision with evidence.</p>
+          </div>
+        </div>
+        <div class="arc-step">
+          <span class="arc-n">04</span>
+          <div>
+            <p class="arc-h">AI product development</p>
+            <p class="arc-p">Four products shipped: retrieval grounding, guardrails, evaluation harnesses, and feedback intelligence pipelines.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PRODUCT THINKING ===================== -->
+<section id="process" class="band-line">
+  <div class="wrap">
+    <p class="section-label">How I think about products</p>
+    <h2 class="section-title">A loop, not a launch</h2>
+    <p class="section-intro">
+      Every project below went through the same six steps. The order matters: I've found that
+      most bad product decisions are actually good decisions made one step too early.
+    </p>
+
+    <ol class="flow reveal">
+      <li class="flow-step">
+        <p class="flow-n">01</p>
+        <h3 class="flow-h">Problem</h3>
+        <p class="flow-p">State the problem in the user's words, not the solution's. If it only makes sense as a feature request, it isn't a problem yet.</p>
+      </li>
+      <li class="flow-step">
+        <p class="flow-n">02</p>
+        <h3 class="flow-h">Users</h3>
+        <p class="flow-p">Who specifically, and what are they doing instead today? The workaround tells you how much the pain is actually worth.</p>
+      </li>
+      <li class="flow-step">
+        <p class="flow-n">03</p>
+        <h3 class="flow-h">Insights</h3>
+        <p class="flow-p">Validate with research and data before committing. Separate what I measured from what I assumed, and label the difference.</p>
+      </li>
+      <li class="flow-step">
+        <p class="flow-n">04</p>
+        <h3 class="flow-h">Product</h3>
+        <p class="flow-p">Scope the smallest version that tests the riskiest assumption. Decide explicitly what the product will refuse to do.</p>
+      </li>
+      <li class="flow-step">
+        <p class="flow-n">05</p>
+        <h3 class="flow-h">Metrics</h3>
+        <p class="flow-p">Pick one North Star that can go down, plus a guardrail. Vanity metrics are the ones that only move in one direction.</p>
+      </li>
+      <li class="flow-step">
+        <p class="flow-n">06</p>
+        <h3 class="flow-h">Iteration</h3>
+        <p class="flow-p">Ship, measure against a baseline, and change the product — not the target — when the evidence disagrees with me.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ===================== PROJECTS ===================== -->
+<section id="work" class="band-sunk">
+  <div class="wrap">
+    <p class="section-label">Selected work</p>
+    <h2 class="section-title">AI products, built end to end</h2>
+    <p class="section-intro">
+      Four products where I owned the problem definition, the build, and the measurement.
+      Every number below comes from the project's own evaluation harness or documentation —
+      none of these have real-world users, and I've labelled capabilities as capabilities.
+    </p>
+
+    <!-- FEATURED CASE STUDY -->
+    <article class="case reveal">
+      <header class="case-head">
+        <p class="kicker"><span class="badge-featured">Featured</span> AI Product · Regulated finance · Retrieval &amp; evaluation</p>
+        <h3 class="case-title">FundBot — a mutual-fund assistant that refuses to guess</h3>
+        <p class="case-sub">
+          A facts-only FAQ assistant over four Mirae Asset schemes. Every answer is short,
+          carries the official source URL and the date that source was last read, and the
+          system declines when retrieval isn't confident.
+        </p>
+      </header>
+
+      <div class="case-body">
+        <div class="case-col">
+          <div class="block">
+            <p class="block-h">Problem</p>
+            <p class="block-p">
+              In regulated finance, a chatbot that invents an expense ratio is worse than no
+              chatbot at all. Retail investors ask the same factual questions — exit loads,
+              SIP minimums, ELSS lock-in, riskometer levels — and a fluent wrong answer is
+              indistinguishable from a right one.
+            </p>
+          </div>
+
+          <div class="block">
+            <p class="block-h">Product decisions</p>
+            <ul class="block-list">
+              <li>
+                <b>The model never supplies a fact.</b> Generation only rephrases a passage
+                retrieval already selected, under a prompt that forbids adding numbers. If the
+                API key is missing, the quota is spent or the request times out, FundBot returns
+                the retrieved passage verbatim. Answers get less conversational; they never get
+                less correct.
+              </li>
+              <li>
+                <b>Lexical retrieval over embeddings.</b> <code>sentence-transformers</code>
+                pulls in roughly 2&nbsp;GB of torch — it doesn't fit a free serverless tier and
+                makes cold starts tens of seconds. For 47 short, keyword-dense financial
+                documents, hybrid BM25F + TF-IDF measured better per byte. The constraint
+                shaped the architecture, and the evaluation proved the trade was fine.
+              </li>
+              <li>
+                <b>The confidence floor came from a sweep, not a guess.</b> Cosine similarity
+                alone was fooled by short off-topic questions sharing one rare word. Adding
+                IDF-coverage scoring and sweeping the threshold gave
+                <code>MIN_CONFIDENCE&nbsp;=&nbsp;0.06</code>: the hardest off-topic question
+                peaks at 0.052, so 0.06 answers 97.6% of real questions with zero false answers.
+              </li>
+              <li>
+                <b>Scope is enforced, not requested.</b> A fund-affinity pass suppresses the
+                other three schemes, so "exit load of the midcap fund" can't be answered with
+                the large cap figure.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="case-col">
+          <div class="block">
+            <p class="block-h">Architecture</p>
+            <div class="pipe">
+              <div class="pipe-row">
+                <span class="pipe-n" aria-hidden="true">1</span>
+                <div>
+                  <p class="pipe-h">Guardrails</p>
+                  <p class="pipe-p">PII → scope → advice. A blocked question never reaches the knowledge base or the model.</p>
+                </div>
+              </div>
+              <div class="pipe-row">
+                <span class="pipe-n" aria-hidden="true">2</span>
+                <div>
+                  <p class="pipe-h">Retrieval</p>
+                  <p class="pipe-p">Hybrid BM25F + TF-IDF over 47 curated documents, with field weighting, bigrams and fund-affinity re-ranking. IDF coverage decides whether we know the answer at all.</p>
+                </div>
+              </div>
+              <div class="pipe-row">
+                <span class="pipe-n" aria-hidden="true">3</span>
+                <div>
+                  <p class="pipe-h">Generation</p>
+                  <p class="pipe-p">DeepSeek via OpenRouter rephrases the retrieved passage. Optional — every failure falls back to extractive output.</p>
+                </div>
+              </div>
+              <div class="pipe-row">
+                <span class="pipe-n" aria-hidden="true">4</span>
+                <div>
+                  <p class="pipe-h">Answer</p>
+                  <p class="pipe-p">Response + source URL + the date that source was last read, so the user can verify the claim instead of trusting the model.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="block">
+            <p class="block-h">Evaluation — the release gate</p>
+            <div class="table-scroll">
+              <table class="eval">
+                <thead>
+                  <tr><th scope="col">Measure</th><th scope="col">Result</th><th scope="col">Floor</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Top-1 retrieval accuracy</td><td class="num"><b>92.7%</b> (38/41)</td><td class="num">85%</td></tr>
+                  <tr><td>Top-3 retrieval accuracy</td><td class="num"><b>100%</b> (41/41)</td><td class="num">95%</td></tr>
+                  <tr><td>Answered above floor</td><td class="num"><b>97.6%</b> (40/41)</td><td class="num">90%</td></tr>
+                  <tr><td>Off-topic rejected</td><td class="num"><b>100%</b> (12/12)</td><td class="num">100%</td></tr>
+                  <tr><td>Competitor questions scoped out</td><td class="num"><b>100%</b> (5/5)</td><td class="num">100%</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="table-note">
+              Scored against 41 hand-labelled paraphrases — none copied from the knowledge
+              base's own phrasings — plus 12 off-topic and 5 competitor-AMC questions. The
+              harness exits non-zero when any floor is breached and CI runs it on every push,
+              alongside 111 unit tests.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <footer class="case-foot">
+        <div class="tag-row">
+          <span class="tag">Python</span>
+          <span class="tag">Flask</span>
+          <span class="tag">BM25F + TF-IDF</span>
+          <span class="tag">OpenRouter · DeepSeek</span>
+          <span class="tag">Vercel serverless</span>
+          <span class="tag">Docker</span>
+          <span class="tag">GitHub Actions</span>
+          <span class="tag">Pytest</span>
+        </div>
+        <div class="link-row">
+          <a class="txt-link" href="https://github.com/Koundinya2003/MF_FAQ_CB" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        </div>
+      </footer>
+    </article>
+
+    <!-- SUPPORTING PROJECTS -->
+    <div class="card-grid">
+
+      <article class="p-card reveal">
+        <p class="kicker">Voice of customer · Product discovery</p>
+        <h3 class="p-title">AI Discovery Engine</h3>
+
+        <div class="p-block">
+          <p class="p-h">Problem</p>
+          <p class="p-p">Product teams have more feedback than anyone can read, and it's scattered across app stores, forums and issue trackers. Manual synthesis doesn't scale, and reading one source biases the conclusion.</p>
+        </div>
+        <div class="p-block">
+          <p class="p-h">What I built</p>
+          <p class="p-p">A discovery tool that collects reviews and comments from six public sources — Google Play, YouTube, Steam, GitHub Issues, Hacker News and RSS — and turns them into an executive summary, ranked pain points, feature requests, sentiment and product opportunities. A natural-language layer answers questions like "what is the biggest complaint?" against the collected set.</p>
+        </div>
+        <div class="p-block">
+          <p class="p-h">Product thinking</p>
+          <p class="p-p">The output is shaped as a discovery artefact, not a chat transcript — themes and ranked pain points map directly to what a PM does next. Six heterogeneous sources is a deliberate choice: store reviews skew to complaints, GitHub and HN skew to power users, so any single source distorts the read.</p>
+        </div>
+        <div class="p-block">
+          <p class="p-h">Outcome</p>
+          <p class="p-p">Compresses multi-source feedback synthesis into a single pass with an exportable report. Demonstrated capability — not deployed with real product teams.</p>
+        </div>
+
+        <div class="p-spacer"></div>
+        <div class="p-foot">
+          <div class="tag-row">
+            <span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">Pandas</span>
+            <span class="tag">OpenRouter LLM</span><span class="tag">Source collectors</span>
+          </div>
+          <div class="link-row">
+            <a class="txt-link" href="https://github.com/Koundinya2003/AI-Discovery-Engine" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="p-card reveal">
+        <p class="kicker">Consumer commerce · Conversational AI</p>
+        <h3 class="p-title">AI Grocery Shopping Assistant</h3>
+
+        <div class="p-block">
+          <p class="p-h">Problem</p>
+          <p class="p-p">AI product search breaks commercially the moment it recommends something the store doesn't stock. One out-of-catalog suggestion costs the trust that made the user try conversational search in the first place.</p>
+        </div>
+        <div class="p-block">
+          <p class="p-h">What I built</p>
+          <p class="p-p">An India-first AI grocery experience: natural-language search, cart-aware basket insights, recommendations and recipe suggestions, wired into a complete browse → cart → checkout → order flow with reviews and a wishlist.</p>
+        </div>
+        <div class="p-block">
+          <p class="p-h">Product thinking</p>
+          <p class="p-p">AI is constrained to the live catalog rather than left to free-associate, and the app degrades gracefully — with no API key it runs in demo mode from seed data instead of erroring. North Star defined as query-to-cart conversion, measured against a keyword-search baseline. Localisation is not cosmetic: rupee pricing, Indian cities, phone validation and Indian grocery brands.</p>
+        </div>
+        <div class="p-block">
+          <p class="p-h">Outcome</p>
+          <p class="p-p">Deployed and publicly usable. A companion implementation rebuilds the recommendation service on FastAPI + SQLAlchemy with a mocked-LLM Pytest suite and documented architecture.</p>
+        </div>
+
+        <div class="p-spacer"></div>
+        <div class="p-foot">
+          <div class="tag-row">
+            <span class="tag">Next.js 15</span><span class="tag">TypeScript</span><span class="tag">TailwindCSS</span>
+            <span class="tag">Zustand</span><span class="tag">TanStack Query</span><span class="tag">Zod</span>
+            <span class="tag">Firestore</span><span class="tag">OpenRouter</span>
+          </div>
+          <div class="link-row">
+            <a class="txt-link" href="https://blinkit-ai-assistantv1.vercel.app" target="_blank" rel="noopener noreferrer">Live demo ↗</a>
+            <a class="txt-link" href="https://github.com/Koundinya2003/Blinkit-Ai_assistantV1" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            <a class="txt-link" href="https://github.com/Koundinya2003/Shopping-Ai_assistant" target="_blank" rel="noopener noreferrer">FastAPI build ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="p-card reveal">
+        <p class="kicker">Fintech · Personal finance · LLM</p>
+        <h3 class="p-title">Wealth Coach AI</h3>
+
+        <div class="p-block">
+          <p class="p-h">Problem</p>
+          <p class="p-p">First-time Indian investors get either generic content or advice priced for people who already have money. Most personal-finance tools also optimise for tracking what you spent rather than deciding where the next rupee should go.</p>
+        </div>
+        <div class="p-block">
+          <p class="p-h">What I built</p>
+          <p class="p-p">A planning tool for earners across a wide monthly income band: a financial-health dashboard, an allocation planner across index funds, mutual funds, debt, gold ETFs and tax-saving instruments, a comparison view, and a growth simulator. A discovery module pulls market signals from RSS, news and Reddit and extracts trends.</p>
+        </div>
+        <div class="p-block">
+          <p class="p-h">Product thinking</p>
+          <p class="p-p">Deliberately scoped to wealth growth rather than expense tracking — a crowded category where the differentiated job-to-be-done is "tell me what to do next," not "tell me what I did." Recommendations are explicitly framed as educational, not regulated advice.</p>
+        </div>
+        <div class="p-block">
+          <p class="p-h">Outcome</p>
+          <p class="p-p">Deployed on Streamlit Cloud. Demonstrated capability — not a licensed advisory product.</p>
+        </div>
+
+        <div class="p-spacer"></div>
+        <div class="p-foot">
+          <div class="tag-row">
+            <span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">Pandas</span>
+            <span class="tag">NumPy</span><span class="tag">SQLite</span><span class="tag">OpenRouter · DeepSeek</span>
+          </div>
+          <div class="link-row">
+            <a class="txt-link" href="https://wealth-monitor-review-intelligence-9oixsvognm4vryrrlagbta.streamlit.app/" target="_blank" rel="noopener noreferrer">Live demo ↗</a>
+            <a class="txt-link" href="https://github.com/Koundinya2003/wealth-monitor-review-intelligence" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== AI DEPTH ===================== -->
+<section id="ai" class="band-dark">
+  <div class="wrap">
+    <p class="section-label">AI product depth</p>
+    <h2 class="section-title">Past the API call</h2>
+    <p class="section-intro">
+      Calling an LLM is the easy part. These are the decisions that actually determine whether
+      an AI feature is shippable — each one drawn from a project above, not from a reading list.
+    </p>
+
+    <div class="cap-grid reveal">
+      <div class="cap">
+        <h3 class="cap-h">Retrieval &amp; grounding</h3>
+        <p class="cap-p">Hybrid BM25F + TF-IDF with field-weighted indexing, bigrams, synonym expansion and entity-affinity re-ranking — chosen over an embedding index after measuring the trade-off against a hard deployment constraint.</p>
+        <p class="cap-src">FundBot</p>
+      </div>
+      <div class="cap">
+        <h3 class="cap-h">Guardrails</h3>
+        <p class="cap-p">PII detection, scope validation and advice-blocking that run <em>before</em> retrieval, so a blocked question never reaches the knowledge base or the model. Refusal is a designed behaviour, not a fallback.</p>
+        <p class="cap-src">FundBot</p>
+      </div>
+      <div class="cap">
+        <h3 class="cap-h">AI evaluation</h3>
+        <p class="cap-p">A labelled evaluation set — paraphrases, off-topic probes and competitor queries — wired into CI as a release gate with explicit floors, plus a threshold sweep to pick the confidence cut-off from data rather than intuition.</p>
+        <p class="cap-src">FundBot</p>
+      </div>
+      <div class="cap">
+        <h3 class="cap-h">Failure design</h3>
+        <p class="cap-p">Every AI path has a defined non-AI outcome: extractive fallback when generation fails, rule-based explanations when the key is absent, demo mode from seed data when the backend is unreachable.</p>
+        <p class="cap-src">FundBot · Shopping Assistant</p>
+      </div>
+      <div class="cap">
+        <h3 class="cap-h">Feedback intelligence</h3>
+        <p class="cap-p">Multi-source ingestion into LLM analysis that outputs ranked pain points, feature requests, sentiment and opportunities — structured so the result is a discovery artefact a PM can act on.</p>
+        <p class="cap-src">AI Discovery Engine</p>
+      </div>
+      <div class="cap">
+        <h3 class="cap-h">Data pipelines</h3>
+        <p class="cap-p">Per-source collectors, Pandas transformation, SQLite and Firestore persistence, exportable reports — and on the analytics side, automated Python ETL over Oracle SQL and HiveQL feeding live dashboards.</p>
+        <p class="cap-src">Discovery Engine · Bosch</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== EXPERIENCE ===================== -->
+<section id="experience">
+  <div class="wrap">
+    <p class="section-label">Experience</p>
+    <h2 class="section-title">Where the data had to change a decision</h2>
+
+    <div class="exp">
+      <div>
+        <h3 class="exp-company">Bosch Automotive Electronics</h3>
+        <p class="exp-role">Data Analyst Intern — Manufacturing Digitalisation</p>
+        <p class="exp-meta">Bengaluru, India<br>Jun – Dec 2024</p>
+        <div class="exp-stack">
+          <span class="tag">Oracle SQL</span><span class="tag">HiveQL</span><span class="tag">Hadoop</span>
+          <span class="tag">Python ETL</span><span class="tag">Tableau</span><span class="tag">KPI design</span>
+        </div>
+      </div>
+
+      <div>
+        <div class="pct-grid reveal">
+          <div class="pct">
+            <p class="pct-v">3 teams</p>
+            <p class="pct-l">adopted the dashboards within 3 weeks</p>
+          </div>
+          <div class="pct">
+            <p class="pct-v">~85%</p>
+            <p class="pct-l">less recurring manual reporting (~10 hrs/week, est.)</p>
+          </div>
+          <div class="pct">
+            <p class="pct-v">15+</p>
+            <p class="pct-l">machines across 5 production lines covered</p>
+          </div>
+          <div class="pct">
+            <p class="pct-v">18%</p>
+            <p class="pct-l">reduction in unplanned downtime contributed to</p>
+          </div>
+        </div>
+
+        <div class="story">
+          <div class="story-row">
+            <p class="story-k">Problem</p>
+            <p class="story-v">
+              Three teams were each maintaining a separate manual KPI report for the same
+              production floor. The data existed; the delay in getting to it was the constraint.
+              Root-cause investigations ran for days because nobody could rank defect drivers
+              without pulling a fresh extract by hand.
+            </p>
+          </div>
+          <div class="story-row">
+            <p class="story-k">Discovery</p>
+            <p class="story-v">
+              Ran discovery with <b>8+ line engineers and quality leads</b> across the three
+              teams, then scoped four dashboard modules <b>sequenced by decision impact rather
+              than request volume</b> — the loudest request was not the one that unblocked the
+              most decisions.
+            </p>
+          </div>
+          <div class="story-row">
+            <p class="story-k">Built</p>
+            <div class="story-v">
+              <ul>
+                <li>Unified Tableau dashboards covering <b>15+ machines across 5 production lines</b>, replacing the three parallel manual reports with self-serve access.</li>
+                <li>An automated <b>Python ETL pipeline over Oracle SQL and HiveQL</b>, so the dashboards refreshed without an analyst in the loop.</li>
+                <li>Four reliability KPIs — <b>MTTR, MTBF, Technical Availability and Technical Loss</b> — defined so engineers could rank defect drivers directly.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="story-row">
+            <p class="story-k">Outcome</p>
+            <p class="story-v">
+              Adopted by <b>3 teams within 3 weeks</b> and cut recurring manual reporting by
+              roughly <b>85%</b> (about 10 hours a week, estimated). Root-cause investigation
+              moved <b>from days to hours</b>, and the work contributed to an
+              <b>18% reduction in unplanned downtime</b>.
+            </p>
+          </div>
+          <div class="story-row">
+            <p class="story-k">Takeaway</p>
+            <p class="story-v">
+              Adoption was the real metric, not dashboard count. Sequencing by decision impact
+              is why three teams switched in three weeks instead of politely ignoring a fourth
+              reporting tool.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PM CASE STUDIES ===================== -->
+<section id="casestudies" class="band-sunk band-line">
+  <div class="wrap">
+    <p class="section-label">Product case studies</p>
+    <h2 class="section-title">Teardowns and growth PRDs</h2>
+    <p class="section-intro">
+      Self-directed product work from the NextLeap fellowship and before it. Where funnel
+      numbers appear, they are estimates built from public benchmarks and community data —
+      labelled as such in the source documents and here.
+    </p>
+
+    <div class="card-grid">
+
+      <article class="p-card reveal">
+        <p class="kicker">Growth strategy · Research · Metrics</p>
+        <h3 class="p-title">ChatGPT Voice Input — India growth strategy</h3>
+
+        <div class="p-block">
+          <p class="p-h">Research</p>
+          <p class="p-p">Surveyed 30+ active Indian mobile ChatGPT users and ran 5–6 in-depth interviews with urban professionals aged 25–34. Found a steep awareness-to-habit drop: 42% knew voice existed, 28% had tried it, 6% used it regularly.</p>
+        </div>
+        <div class="p-block">
+          <p class="p-h">Insight</p>
+          <p class="p-p">The barrier wasn't capability, it was reversibility. 68% reported accent or language recognition failures, 61% privacy discomfort in shared spaces, and 57% wanted to review text before sending. One bad send ended the habit — so the interface, which looks like a search bar, was teaching the wrong mental model.</p>
+        </div>
+        <div class="p-block">
+          <p class="p-h">Solution</p>
+          <p class="p-p">Chose contextual modes plus a rich empty state over a one-shot onboarding flow, because onboarding fires once and modes work every session. Voice becomes the primary CTA; a persistent "no auto-send · review first" badge answers the privacy anxiety; auto-corrections are visible and reversible. Explicitly ruled out auto-send and an always-on mic.</p>
+        </div>
+        <div class="p-block">
+          <p class="p-h">Metrics</p>
+          <p class="p-p">North Star: weekly active voice conversation users, targeting 6% → 25% in three months. Guardrails on Hinglish transcription accuracy and voice CSAT, with a stated refusal to count raw mic taps as success.</p>
+        </div>
+
+        <div class="p-spacer"></div>
+        <div class="p-foot">
+          <div class="tag-row">
+            <span class="tag">User research</span><span class="tag">JTBD</span><span class="tag">Wireframing</span>
+            <span class="tag">KPI tree</span><span class="tag">Competitive analysis</span>
+          </div>
+          <div class="link-row">
+            <a class="txt-link" href="https://gilded-mousse-b37ea5.netlify.app/" target="_blank" rel="noopener noreferrer">Live deck ↗</a>
+            <a class="txt-link" href="https://github.com/Koundinya2003/Prioritization-Metrics-Growth" target="_blank" rel="noopener noreferrer">Case study ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="p-card reveal">
+        <p class="kicker">Activation · Funnel teardown · PLG</p>
+        <h3 class="p-title">n8n — onboarding &amp; activation teardown</h3>
+
+        <div class="p-block">
+          <p class="p-h">Problem</p>
+          <p class="p-p">n8n's product is strong; its first ten minutes are not. New users complete a mandatory four-question survey, get redirected to a YouTube video, and then land on a completely blank canvas with no starting point.</p>
+        </div>
+        <div class="p-block">
+          <p class="p-h">Insight</p>
+          <p class="p-p">In an estimated funnel built from PLG benchmarks and community data, the largest single drop — 27 points — sits between entering the dashboard and creating a first node. That's blank-canvas paralysis, and it's a design problem, not a user-intelligence problem. The survey itself is defensible; the gap is that nothing the user tells n8n changes what they see next.</p>
+        </div>
+        <div class="p-block">
+          <p class="p-h">Recommendation</p>
+          <p class="p-p">P0: open to a pre-populated workflow that runs immediately with no credentials, and actually use the survey data to personalise the landing state. P1: replace the video with in-canvas guidance, and add a credential-free sandbox for day zero.</p>
+        </div>
+        <div class="p-block">
+          <p class="p-h">Metrics</p>
+          <p class="p-p">North Star: time to first successful workflow execution — value delivered, not checklist completion. Proposed as A/B tests with day-7 retention as the guardrail.</p>
+        </div>
+
+        <div class="p-spacer"></div>
+        <div class="p-foot">
+          <div class="tag-row">
+            <span class="tag">Funnel analysis</span><span class="tag">Personas</span><span class="tag">Prioritisation</span>
+            <span class="tag">Experiment design</span>
+          </div>
+          <div class="link-row">
+            <a class="txt-link" href="https://github.com/Koundinya2003/n8n-product-teardown" target="_blank" rel="noopener noreferrer">Read the teardown ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="p-card reveal">
+        <p class="kicker">EdTech · Monetisation · Localisation</p>
+        <h3 class="p-title">Eureka by ALLEN — product teardown</h3>
+
+        <div class="p-block">
+          <p class="p-h">Problem</p>
+          <p class="p-p">Eureka's story-led, narrative-driven lessons are its strongest differentiator in Indian EdTech — but the funnel asks students to commit to a trial or enrolment before they experience that value.</p>
+        </div>
+        <div class="p-block">
+          <p class="p-h">Insight</p>
+          <p class="p-p">Two frictions compound: a premature upsell and English-only content, which creates a comprehension wall for learners who don't think in English first. The pedagogy never gets a chance to do its job.</p>
+        </div>
+        <div class="p-block">
+          <p class="p-h">Recommendation</p>
+          <p class="p-p">Let students experience the product in their own language before asking them to commit — a localisation-first fix to a monetisation-timing problem.</p>
+        </div>
+        <div class="p-block">
+          <p class="p-h">Format</p>
+          <p class="p-p">A seven-slide visual teardown plus a one-page written summary covering product understanding, biggest strength, biggest weakness and a single recommendation.</p>
+        </div>
+
+        <div class="p-spacer"></div>
+        <div class="p-foot">
+          <div class="tag-row">
+            <span class="tag">Product teardown</span><span class="tag">Onboarding</span>
+            <span class="tag">Monetisation</span><span class="tag">Localisation</span>
+          </div>
+          <div class="link-row">
+            <a class="txt-link" href="https://github.com/Koundinya2003/Eureka_PRD" target="_blank" rel="noopener noreferrer">Read the teardown ↗</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SKILLS ===================== -->
+<section id="skills">
+  <div class="wrap">
+    <p class="section-label">Skills</p>
+    <h2 class="section-title">What I actually work with</h2>
+    <p class="section-intro">
+      Grouped by what they're for. Everything here appears in the projects above or in work
+      I did at Bosch — no percentage bars, no logos for tools I've read about.
+    </p>
+
+    <div class="skill-grid reveal">
+      <div class="skill-card">
+        <h3 class="skill-h">Product</h3>
+        <p class="skill-note">Discovery through to the metric that decides a launch.</p>
+        <div class="skill-list">
+          <span class="tag">Product discovery</span><span class="tag">User research</span>
+          <span class="tag">PRDs</span><span class="tag">MVP scoping</span>
+          <span class="tag">RICE prioritisation</span><span class="tag">Roadmapping</span>
+          <span class="tag">North Star metrics</span><span class="tag">A/B experimentation</span>
+          <span class="tag">Product teardowns</span><span class="tag">Funnel &amp; activation analysis</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <h3 class="skill-h">Data &amp; analytics</h3>
+        <p class="skill-note">From raw manufacturing tables to dashboards people act on.</p>
+        <div class="skill-list">
+          <span class="tag">SQL</span><span class="tag">Oracle SQL</span><span class="tag">HiveQL</span>
+          <span class="tag">Hadoop / Hive</span><span class="tag">Python (Pandas)</span>
+          <span class="tag">ETL automation</span><span class="tag">Tableau</span>
+          <span class="tag">Power BI</span><span class="tag">KPI design</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <h3 class="skill-h">AI</h3>
+        <p class="skill-note">Grounding, guardrails and evaluation — not just prompting.</p>
+        <div class="skill-list">
+          <span class="tag">LLM applications</span><span class="tag">RAG &amp; retrieval</span>
+          <span class="tag">Prompt engineering</span><span class="tag">AI evaluation</span>
+          <span class="tag">LLM guardrails</span><span class="tag">Embeddings &amp; semantic search</span>
+          <span class="tag">Sentiment &amp; theme analysis</span><span class="tag">OpenRouter / OpenAI APIs</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <h3 class="skill-h">Development</h3>
+        <p class="skill-note">Enough to build and ship the thing myself.</p>
+        <div class="skill-list">
+          <span class="tag">Git / GitHub</span><span class="tag">REST APIs</span>
+          <span class="tag">FastAPI / Flask</span><span class="tag">Streamlit</span>
+          <span class="tag">Next.js / TypeScript</span><span class="tag">SQLite</span>
+          <span class="tag">Firestore</span><span class="tag">Docker</span>
+          <span class="tag">Pytest</span><span class="tag">GitHub Actions CI</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== EDUCATION ===================== -->
+<section id="education" class="band-line">
+  <div class="wrap">
+    <p class="section-label">Education &amp; certifications</p>
+    <h2 class="section-title">Background</h2>
+
+    <div class="edu-grid reveal">
+      <div class="edu">
+        <h3 class="edu-h">B.Tech, Computer Science &amp; Engineering</h3>
+        <p class="edu-m">Vellore Institute of Technology, Bhopal · 2021–2025</p>
+        <p class="edu-p">GPA 7.7 / 10.</p>
+      </div>
+      <div class="edu">
+        <h3 class="edu-h">Product Management Fellowship</h3>
+        <p class="edu-m">NextLeap · Cohort 47 · Mar–Jun 2026</p>
+        <p class="edu-p">Product discovery, user problems, strategy, metrics and AI product development. Self-directed teardowns and growth PRDs: Eureka by ALLEN, voice input in urban India, n8n onboarding.</p>
+      </div>
+      <div class="edu">
+        <h3 class="edu-h">Certifications</h3>
+        <p class="edu-m">Forage · Coursera</p>
+        <div class="edu-p">
+          <ul>
+            <li>Product Management Simulation — Electronic Arts (Forage)</li>
+            <li>Quantitative Research — JPMorgan Chase (Forage)</li>
+            <li>Machine Learning Specialization — Coursera</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section id="contact" class="band-dark">
+  <div class="wrap">
+    <p class="section-label">Contact</p>
+    <h2 class="section-title">Let's talk about a product problem</h2>
+    <p class="section-intro">
+      I'm looking for Associate Product Manager, Product Analyst, Product Operations,
+      AI Product, Business Analyst and Growth Analytics roles. Happy to walk through any
+      of the work above — including the parts that didn't work.
+    </p>
+    <div class="contact-actions">
+      <a class="btn btn-primary" href="mailto:koundinyaaditya2853@gmail.com">koundinyaaditya2853@gmail.com</a>
+      <a class="btn btn-outline" href="https://www.linkedin.com/in/adityakkoundinya/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+      <a class="btn btn-outline" href="https://github.com/Koundinya2003" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      <a class="btn btn-outline" href="assets/Aditya-K-Koundinya-Resume.pdf" download>Résumé (PDF)</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="foot-inner">
+    <span class="foot-t">© <span id="yr">2026</span> Aditya K. Koundinya · Bengaluru, India</span>
+    <span class="foot-t">Built as a static page — no framework, no tracking</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  // Mobile menu
+  var nav = document.getElementById('siteNav');
+  var toggle = document.getElementById('navToggle');
+  var links = document.getElementById('navLinks');
+
+  function setOpen(open) {
+    nav.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.textContent = open ? 'Close' : 'Menu';
+  }
+
+  toggle.addEventListener('click', function () {
+    setOpen(!nav.classList.contains('open'));
+  });
+
+  links.addEventListener('click', function (e) {
+    if (e.target.tagName === 'A') setOpen(false);
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && nav.classList.contains('open')) {
+      setOpen(false);
+      toggle.focus();
+    }
+  });
+
+  // Close the mobile panel if the viewport grows past the breakpoint
+  var mq = window.matchMedia('(min-width: 901px)');
+  var onChange = function (e) { if (e.matches) setOpen(false); };
+  if (mq.addEventListener) mq.addEventListener('change', onChange);
+  else if (mq.addListener) mq.addListener(onChange);
+
+  // Footer year
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Scroll reveal
+  var revealables = document.querySelectorAll('.reveal');
+  if (reduce || !('IntersectionObserver' in window)) {
+    Array.prototype.forEach.call(revealables, function (el) { el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+    Array.prototype.forEach.call(revealables, function (el) { io.observe(el); });
+  }
+
+  // Active nav link
+  var navAnchors = Array.prototype.slice.call(links.querySelectorAll('a'));
+  var sections = navAnchors
+    .map(function (a) { return document.querySelector(a.getAttribute('href')); })
+    .filter(Boolean);
+
+  if ('IntersectionObserver' in window && sections.length) {
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        navAnchors.forEach(function (a) {
+          a.classList.toggle('is-active', a.getAttribute('href') === '#' + entry.target.id);
+        });
+      });
+    }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+    sections.forEach(function (s) { spy.observe(s); });
+  }
+})();
+</script>
+
+</body>
+</html>
