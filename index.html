@@ -28,9 +28,8 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2312120F'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' fill='%23F6F3ED' text-anchor='middle'%3EA%3C/text%3E%3Ccircle cx='47' cy='19' r='5' fill='%23C8440A'/%3E%3C/svg%3E">
 <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2312120F'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' fill='%23F6F3ED' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Serif+Display&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/sora-var.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/dm-serif-display-400.woff2" crossorigin>
 
 <script type="application/ld+json">
 {
@@ -51,6 +50,28 @@
 </script>
 
 <style>
+  /* Self-hosted latin subsets — no third-party font request. */
+  @font-face {
+    font-family: 'Sora'; font-style: normal; font-weight: 300 600;
+    font-display: swap; src: url('assets/fonts/sora-var.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'DM Serif Display'; font-style: normal; font-weight: 400;
+    font-display: swap; src: url('assets/fonts/dm-serif-display-400.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'DM Serif Display'; font-style: italic; font-weight: 400;
+    font-display: swap; src: url('assets/fonts/dm-serif-display-400-italic.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'DM Mono'; font-style: normal; font-weight: 400;
+    font-display: swap; src: url('assets/fonts/dm-mono-400.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'DM Mono'; font-style: normal; font-weight: 500;
+    font-display: swap; src: url('assets/fonts/dm-mono-500.woff2') format('woff2');
+  }
+
   :root {
     --ink:      #12120F;
     --ink-soft: #2A2A25;
