@@ -13,6 +13,7 @@ A single static page. No framework, no build step, no dependencies, no tracking.
 ```
 index.html      the whole site (inline CSS + ~70 lines of vanilla JS)
 assets/         résumé PDF, Open Graph image
+assets/fonts/   self-hosted Syne, Sora and DM Mono subsets — no third-party font request
 _redirects      Netlify: legacy /aditya_portfolio.html → /
 .nojekyll       GitHub Pages: serve assets/ as-is, skip Jekyll processing
 ```
@@ -35,5 +36,7 @@ unchanged on Vercel.
 ## Editing
 
 All content lives in `index.html`, in section order: hero, about, product thinking,
-selected work, AI depth, experience, product case studies, skills, education, contact.
+selected work, product depth, experience, product case studies, skills, education, contact.
+Section accents are set per band with the `a-lime` / `a-coral` / `a-violet` / `a-cyan`
+classes, and light bands use `band--cream`.
 Replacing `assets/Aditya-K-Koundinya-Resume.pdf` updates every résumé link on the page.
